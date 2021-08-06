@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "@wdio/cli": "^7.9.0"
+  },
+  "devDependencies": {
+    "@wdio/cucumber-framework": "^7.9.0",
+    "@wdio/local-runner": "^7.9.0",
+    "@wdio/spec-reporter": "^7.9.0",
+    "chromedriver": "^92.0.1",
+    "fs-extra": "^10.0.0",
+    "multiple-cucumber-html-reporter": "^1.18.0",
+    "wdio-chromedriver-service": "^7.2.0",
+    "wdio-cucumberjs-json-reporter": "^4.0.0"
+  }
+}
