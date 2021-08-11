@@ -1,4 +1,8 @@
 {
+  "scripts": {
+    "test": "npx wdio run wdio.conf.js"
+  },
+  
   "dependencies": {
     "@wdio/cli": "^7.9.0"
   },

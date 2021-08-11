@@ -289,15 +289,15 @@ exports.config = {
      * @param {string}                 result.error    error stack if scenario failed
      * @param {number}                 result.duration duration of scenario in milliseconds
      */
-     afterScenario: function (world, result,error,scenario) {
-
-        if(result.passed = "true"){
-            let screenshotPath = rootPath + 'screenshots/';
-            let fileName = screenshotPath+ new Date().getTime() + 'screenshot.png' ;
-            browser.saveScreenshot(fileName);
-        }
+     afterScenario: function (world, result,error,scenario) 
+        {
+            if(result.passed = "true"){
+                let screenshotPath = rootPath + 'screenshots/';
+                let fileName = screenshotPath+ new Date().getTime() + 'screenshot.png' ;
+                browser.saveScreenshot(fileName);
+            }
         
-     },
+        },
     /**
      *
      * Runs after a Cucumber Feature.
@@ -347,7 +347,6 @@ exports.config = {
     onComplete: () => {
         // Generate the report when it all tests are done
         generate({
-          // Required
           // This part needs to be the same path where you store the JSON files
           jsonDir: './reports/JSON-Reports/',
           reportPath: './reports/report-html/',

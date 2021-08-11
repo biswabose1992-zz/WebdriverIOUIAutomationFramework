@@ -16,8 +16,14 @@ class LoginPage extends Page {
      * e.g. to login using username and password
      */
     async login (username, password) {
+        /**
+         * Assertions to verify object is present or not
+         */
+        await expect(this.inputUsername).toBeDisplayed();
         await this.inputUsername.setValue(username);
+        await expect(this.inputPassword).toBeDisplayed();
         await this.inputPassword.setValue(password);
+        await expect(this.btnSubmit).toBeDisplayed();
         await this.btnSubmit.click();
     }
 

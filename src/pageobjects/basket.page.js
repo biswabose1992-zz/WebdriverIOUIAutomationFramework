@@ -10,17 +10,18 @@ class BasketPage extends Page {
      get listofitmesinbasket() {return $$('//div[@class="inventory_item_price"]/../button' )}
      get checkoutbtn() {return $('#checkout')}
    
-     async clickoncheapestitem () {
-  
-        var count= await this.listofitmesinbasket.length;
-        
-        await this.listofitmesinbasket[0].click();
+     async clickoncheapestitem () 
+      {
+         var count= await this.listofitmesinbasket.length;
+         await expect(this.listofitmesinbasket).toBeDisplayed();
+         await this.listofitmesinbasket[0].click();
      
-     } 
+      } 
 
-     async Checkoutbasket () {
-        await this.checkoutbtn.click();
-     
+     async Checkoutbasket () 
+     {
+         await expect(this.checkoutbtn).toBeDisplayed();
+         await this.checkoutbtn.click(); 
      } 
 }
 

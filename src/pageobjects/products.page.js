@@ -12,13 +12,16 @@ class ProductsPage extends Page {
     get shoppingbasketbtn() {return $('//a[@class="shopping_cart_link"]' )}
 
 
-   async sortbyPrice () {
+   async sortbyPrice () 
+   {
+      await expect(this.dropdownfilter).toBeDisplayed();
       await this.dropdownfilter.waitForClickable({ timeout: 3000 })
       await this.dropdownfilter.selectByIndex(3);    
    }
 
-   async selectcheapitems (Nofcheapitems) {
-    /**
+   async selectcheapitems (Nofcheapitems) 
+   {
+      /**
       * Code below adds items in cart based on cheapest price
       */
       const count= await this.itemslist.length;
@@ -27,7 +30,9 @@ class ProductsPage extends Page {
          }
    }
 
-   async clickonshoppingbasket () {
+   async clickonshoppingbasket () 
+   {
+      await expect(this.shoppingbasketbtn).toBeDisplayed();
       await this.shoppingbasketbtn.click();
    }
    
